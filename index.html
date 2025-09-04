@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BÀI TẬP CAPSTONE</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- font awersome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- tailwind css cdn -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+        ></script>
+        <style>
+            .font-primary {
+                font-family: "Outfit", sans-serif;
+            }
+
+            .color-primary {
+                color: #4e6bff;
+            }
+
+            .color-primary-hover:hover {
+                color: #4e6bff;
+            }
+
+            .color-secondary {
+                color: #79808a;
+                line-height: 1.5rem; /* tương đương leading-6 */
+            }
+
+            .color-third {
+                color: #181c31;
+            }
+
+            .btn-primary {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 2rem; /* px-8 */
+                padding-right: 2rem;
+                padding-top: 0.75rem; /* py-3 */
+                padding-bottom: 0.75rem;
+                border-radius: 9999px; /* rounded-full */
+                transition-property: all;
+                transition-duration: 300ms;
+                background-color: #4e6bff;
+                color: #fff;
+                font-weight: 500; /* font-medium */
+            }
+
+            .btn-primary:hover {
+                background-color: #f36a8d;
+            }
+
+            .btn-pricing {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 9999px;
+                transition-property: all;
+                transition-duration: 300ms;
+                background-color: #f36a8d;
+                color: #fff;
+                font-weight: 500;
+            }
+
+            .btn-pricing:hover {
+                background-color: #4e6bff;
+            }
+
+            .btn-subpricing {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 9999px;
+                transition-property: all;
+                transition-duration: 300ms;
+                background-color: #4e6bff;
+                color: #fff;
+                font-weight: 500;
+            }
+
+            .btn-subpricing:hover {
+                background-color: #f36a8d;
+            }
+            .swiper-button-prev::after,
+            .swiper-button-next::after {
+                font-size: 16px !important; /* chỉnh kích thước nhỏ lại (mặc định là 20px hoặc hơn) */
+            }
+        </style>
+
+        <!-- Swiper CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    </head>
+    <body>
+        <!-- section we offer -->
+        <section class="py-20 bg-[#FFFFFF] container mx-auto">
+            <div class="container mx-auto items-center text-center">
+                <h2 class="text-5xl font-semibold pb-8 leading-14">
+                    We Offer Great Affordable <br />
+                    Premium Prices.
+                </h2>
+                <p class="leading-6 color-secondary">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content <br />
+                    of a page when looking at its layout. The point of using.
+                </p>
+            </div>
+            <div class="pt-[50px] py-8">
+                <div class="flex justify-center text-center items-center mb-10">
+                    <ul
+                        id="tabs"
+                        class="flex gap-8 bg-white rounded-full shadow-xl px-4 py-2 max-w-3xl"
+                    >
+                        <li>
+                            <button
+                                class="tab px-4 py-2 rounded-full text-slate-600"
+                            >
+                                All
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="tab px-4 py-2 rounded-full text-slate-600"
+                            >
+                                Branding Strategy
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="tab px-4 py-2 rounded-full text-slate-600"
+                            >
+                                Digital Experiences
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="tab px-4 py-2 rounded-full text-slate-600"
+                            >
+                                Ecommerce
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="container mx-auto grid md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 gap-5"
+                >
+                    <div class="relative group overflow-hidden">
+                        <img
+                            class="w-full h-full"
+                            src="https://base-tailwind.preview.uideck.com/images/project-01.png"
+                            alt="#"
+                        />
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-500/50 rounded-xl opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out leading-10"
+                        >
+                            <h2 class="text-2xl font-medium">
+                                Photo Retouching
+                            </h2>
+                            <p class="opacity-75">Branded Ecommerce</p>
+
+                            <a
+                                class="flex items-center text-center text-white p-5 rounded-[50%] bg-[#4E6BFF]"
+                                href=""
+                                ><i class="fa-solid fa-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden">
+                        <img
+                            class="w-full h-full"
+                            src="https://base-tailwind.preview.uideck.com/images/project-02.png"
+                            alt="#"
+                        />
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-500/50 rounded-xl opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out leading-10"
+                        >
+                            <h2 class="text-2xl font-medium">
+                                Photo Retouching
+                            </h2>
+                            <p class="opacity-75">Branded Ecommerce</p>
+
+                            <a
+                                class="flex items-center text-center text-white p-5 rounded-[50%] bg-[#4E6BFF]"
+                                href=""
+                                ><i class="fa-solid fa-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="row-span-2 relative group overflow-hidden">
+                        <img
+                            class="w-full h-full"
+                            src="https://base-tailwind.preview.uideck.com/images/project-04.png"
+                            alt="#"
+                        />
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-500/50 rounded-xl opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out leading-10"
+                        >
+                            <h2 class="text-2xl font-medium">
+                                Photo Retouching
+                            </h2>
+                            <p class="opacity-75">Branded Ecommerce</p>
+
+                            <a
+                                class="flex items-center text-center text-white p-5 rounded-[50%] bg-[#4E6BFF]"
+                                href=""
+                                ><i class="fa-solid fa-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="col-span-2 relative group overflow-hidden">
+                        <img
+                            class="w-full h-full"
+                            src="https://base-tailwind.preview.uideck.com/images/project-03.png"
+                            alt="#"
+                        />
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-500/50 rounded-xl opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out leading-10"
+                        >
+                            <h2 class="text-2xl font-medium">
+                                Photo Retouching
+                            </h2>
+                            <p class="opacity-75">Branded Ecommerce</p>
+
+                            <a
+                                class="flex items-center text-center text-white p-5 rounded-[50%] bg-[#4E6BFF]"
+                                href=""
+                                ><i class="fa-solid fa-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sectionc client -->
+        <section class="pb-30 container mx-auto">
+            <!-- tiêu đề  -->
+            <div class="container mx-auto items-center text-center">
+                <h2 class="text-6xl font-semibold pb-8">
+                    Client’s Testimonials
+                </h2>
+                <p class="leading-6 color-secondary">
+                    It is a long established fact that a reader will be
+                    distracted by the readable <br />content of a page when
+                    looking at its layout. The point of using.
+                </p>
+            </div>
+            <!-- Slider container -->
+            <div class="swiper max-w-7xl mt-20">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="bg-white relative rounded-2xl shadow-xl overflow-hidden p-8 md:py-30 grid md:grid-cols-[300px,1fr] gap-8 items-center"
+                        >
+                            <img
+                                src="https://base-tailwind.preview.uideck.com/images/testimonial.png"
+                                alt="avatar"
+                                class="w-full h-[300px] object-cover rounded-xl"
+                            />
+
+                            <div class="relative">
+                                <div>
+                                    <img
+                                        src="https://base-tailwind.preview.uideck.com/images/icon-quote.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <p
+                                    class="text-xl italic leading-relaxed text-slate-500 mt-[22px] mb-[40px]"
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Quas, itaque. Quibusdam
+                                    fuga error dicta autem perspiciatis corrupti
+                                    voluptatem esse sapiente. Nisi, quod.
+                                </p>
+                                <div class="mt-6">
+                                    <div class="text-slate-900 font-semibold">
+                                        Devid Smith
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="color-secondary"
+                                            >Founder @democompany</span
+                                        >
+                                        <img
+                                            src="https://base-tailwind.preview.uideck.com/images/brand-light-02.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute w-2 h-[50%] top-0 right-0 bg-blue-500"
+                            ></div>
+                            <div
+                                class="absolute w-2 h-[50%] bottom-0 right-0 bg-red-500"
+                            ></div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl overflow-hidden p-8 md:py-30 grid md:grid-cols-[300px,1fr] gap-8 items-center"
+                        >
+                            <img
+                                src="https://base-tailwind.preview.uideck.com/images/testimonial.png"
+                                alt="avatar"
+                                class="w-full h-[300px] object-cover rounded-xl"
+                            />
+
+                            <div>
+                                <div>
+                                    <img
+                                        src="https://base-tailwind.preview.uideck.com/images/icon-quote.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <p
+                                    class="text-xl italic leading-relaxed text-slate-500 mt-[22px] mb-[40px]"
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Quas, itaque. Quibusdam
+                                    fuga error dicta autem perspiciatis corrupti
+                                    voluptatem esse sapiente. Nisi, quod.
+                                </p>
+                                <div class="mt-6">
+                                    <div class="text-slate-900 font-semibold">
+                                        Devid Smith
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Founder @democompany</span>
+                                        <img
+                                            src="https://base-tailwind.preview.uideck.com/images/brand-light-02.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="flex justify-center gap-6 mt-20">
+                    <button
+                        class="swiper-button-prev !static !w-12 !h-12 rounded-full border border-slate-300 text-slate-600 grid place-items-center hover:bg-slate-50 hover:border-slate-400 transition"
+                    ></button>
+                    <button
+                        class="swiper-button-next !static !w-12 !h-12 rounded-full border border-slate-300 text-slate-600 grid place-items-center hover:bg-slate-50 hover:border-slate-400 transition"
+                    ></button>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-gray-100 relative">
+            <img
+                class="absolute"
+                src="https://base-tailwind.preview.uideck.com/images/shape-15.svg"
+                alt=""
+            />
+            <div
+                class="container mx-auto max-w-6xl grid grid-cols-2 md:flex justify-between gap-10 py-[90px]"
+            >
+                <div>
+                    <h3 class="text-[50px] mb-2 font-extrabold">785</h3>
+                    <p class="text-[19px] color-secondary">Global Brands</p>
+                </div>
+                <div>
+                    <h3 class="text-[50px] mb-2 font-extrabold">533</h3>
+                    <p class="text-[19px] color-secondary">Happy Clients</p>
+                </div>
+                <div>
+                    <h3 class="text-[50px] mb-2 font-extrabold">865</h3>
+                    <p class="text-[19px] color-secondary">Winning Award</p>
+                </div>
+                <div>
+                    <h3 class="text-[50px] mb-2 font-extrabold">346</h3>
+                    <p class="text-[19px] color-secondary">Happy Clients</p>
+                </div>
+            </div>
+            <img
+                class="absolute top-2 left-185"
+                src="https://base-tailwind.preview.uideck.com/images/shape-14.svg"
+                alt=""
+            />
+            <img
+                class="absolute bottom-10 left-30 animate-spin"
+                src="https://base-tailwind.preview.uideck.com/images/shape-11.svg"
+                alt=""
+            />
+            <img
+                class="absolute w-[84px] h-[42px] top-[6%] right-[2%] text-lg transition rotate-45"
+                src="https://base-tailwind.preview.uideck.com/images/shape-07.svg"
+                alt=""
+            />
+        </section>
+        <!-- section trusted -->
+        <section class="text-center pt-30 container mx-auto">
+            <h2 class="text-5xl font-semibold pb-8">
+                Trusted by Global Brands
+            </h2>
+            <p class="color-secondary">
+                It is a long established fact that a reader will be distracted
+                by the readable content <br />
+                of a page when looking at its layout. The point of using.
+            </p>
+            <div
+                class="container mx-auto text-center grid grid-cols-3 md:flex max-w-5xl gap-20 mt-[60px] px-8 pb-[90px] border-b-1 border-gray-500"
+            >
+                <a href="">
+                    <img
+                        src="https://base-tailwind.preview.uideck.com/images/brand-light-01.svg"
+                        alt=""
+                    />
+                </a>
+                <a class="opacity-80 hover:opacity-100" href=""
+                    ><img
+                        src="https://base-tailwind.preview.uideck.com/images/brand-light-02.svg"
+                        alt=""
+                    />
+                </a>
+                <a class="opacity-80 hover:opacity-100" href=""
+                    ><img
+                        src="https://base-tailwind.preview.uideck.com/images/brand-light-03.svg"
+                        alt=""
+                    />
+                </a>
+                <a class="opacity-80 hover:opacity-100" href=""
+                    ><img
+                        src="https://base-tailwind.preview.uideck.com/images/brand-light-04.svg"
+                        alt=""
+                    />
+                </a>
+                <a class="opacity-80 hover:opacity-100" href="">
+                    <img
+                        src="https://base-tailwind.preview.uideck.com/images/brand-light-05.svg"
+                        alt=""
+                /></a>
+                <a class="opacity-80 hover:opacity-100" href=""
+                    ><img
+                        src="https://base-tailwind.preview.uideck.com/images/brand-light-06.svg"
+                        alt=""
+                    />
+                </a>
+            </div>
+        </section>
+        <!-- section latest -->
+        <section class="py-30 text-center container mx-auto">
+            <div>
+                <h2 class="text-5xl font-semibold pb-8">Latest Blogs & News</h2>
+                <p class="text-[16px] color-secondary">
+                    It is a long established fact that a reader will be
+                    distracted by the readable <br />
+                    content of a page when looking at its layout. The point of
+                    using.
+                </p>
+            </div>
+
+            <div
+                class="container mx-auto lg:flex justify-between max-w-6xl gap-8 text-center pt-20"
+            >
+                <div class="bg-white shadow rounded-xl">
+                    <div class="relative group overflow-hidden">
+                        <img
+                            src="https://base-tailwind.preview.uideck.com/images/blog-01.png"
+                            alt=""
+                        />
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full flex justify-center items-center bg-gray-500/50 rounded-xl opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out"
+                        >
+                            <button
+                                class="absolute p-3 bg-[#4E6BFF] rounded-xl text-white hover:bg-[#F36A8D]"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-[30px]">
+                        <div class="flex gap-5 py-5">
+                            <div class="flex gap-1">
+                                <img
+                                    src="https://base-tailwind.preview.uideck.com/images/icon-man.svg"
+                                    alt=""
+                                />
+                                <p class="opacity-75">Musharof Chy</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <img
+                                    src="https://base-tailwind.preview.uideck.com/images/icon-calender.svg"
+                                    alt=""
+                                />
+                                <p class="opacity-75">25 Dec, 2025</p>
+                            </div>
+                        </div>
+
+                        <p
+                            class="text-2xl font-bold text-left hover:text-[#4E6BFF] transition-all duration-500 ease-out"
+                        >
+                            Free advertising for your <br />
+                            online business
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded-xl">
+                    <div class="relative group overflow-hidden">
+                        <img
+                            src="https://base-tailwind.preview.uideck.com/images/blog-02.png"
+                            alt=""
+                        />
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full flex justify-center items-center bg-gray-500/50 rounded-xl opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out"
+                        >
+                            <button
+                                class="absolute p-3 bg-[#4E6BFF] rounded-xl text-white hover:bg-[#F36A8D]"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-[30px]">
+                        <div class="flex gap-5 py-5">
+                            <div class="flex gap-1">
+                                <img
+                                    src="https://base-tailwind.preview.uideck.com/images/icon-man.svg"
+                                    alt=""
+                                />
+                                <p class="opacity-75">Musharof Chy</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <img
+                                    src="https://base-tailwind.preview.uideck.com/images/icon-calender.svg"
+                                    alt=""
+                                />
+                                <p class="opacity-75">25 Dec, 2025</p>
+                            </div>
+                        </div>
+
+                        <p
+                            class="text-2xl font-bold text-left hover:text-[#4E6BFF] transition-all duration-500 ease-out"
+                        >
+                            9 simple ways to improve <br />
+                            your design skills
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded-xl">
+                    <div class="relative group overflow-hidden">
+                        <img
+                            src="https://base-tailwind.preview.uideck.com/images/blog-03.png"
+                            alt=""
+                        />
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full flex justify-center items-center bg-gray-500/50 rounded-xl opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out"
+                        >
+                            <button
+                                class="absolute p-3 bg-[#4E6BFF] rounded-xl text-white hover:bg-[#F36A8D]"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-[30px]">
+                        <div class="flex gap-5 py-5">
+                            <div class="flex gap-1">
+                                <img
+                                    src="https://base-tailwind.preview.uideck.com/images/icon-man.svg"
+                                    alt=""
+                                />
+                                <p class="opacity-75">Musharof Chy</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <img
+                                    src="https://base-tailwind.preview.uideck.com/images/icon-calender.svg"
+                                    alt=""
+                                />
+                                <p class="opacity-75">25 Dec, 2025</p>
+                            </div>
+                        </div>
+
+                        <p
+                            class="text-2xl font-bold text-left hover:text-[#4E6BFF] transition-all duration-500 ease-out"
+                        >
+                            Tips to quickly improve your <br />
+                            coding speed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+        const tabs = document.querySelectorAll("#tabs .tab");
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                tabs.forEach((t) =>
+                    t.classList.remove("bg-blue-500", "text-white")
+                );
+                tab.classList.add("bg-blue-500", "text-white");
+            });
+        });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</html>
